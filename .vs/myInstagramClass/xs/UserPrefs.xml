@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{7A521833-AFDB-4E76-9840-F18CAF33D7C0}|Default">
+  <MonoDevelop.Ide.ItemProperties.myInstagramClass PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Models/Users.cs">
+    <Files>
+      <File FileName="Program.cs" Line="35" Column="79" />
+      <File FileName="Models/Users.cs" Line="17" Column="2" />
+      <File FileName="Models/Roles.cs" />
+      <File FileName="Models/Images.cs" />
+      <File FileName="Models/Posts.cs" />
+      <File FileName="Models/Comments.cs" />
+      <File FileName="DTOS/UsersDTO.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="myInstagramClass" expanded="True">
+            <Node name="myInstagramClass" expanded="True">
+              <Node name="DTOS" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Users.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

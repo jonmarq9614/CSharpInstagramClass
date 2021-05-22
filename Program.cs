@@ -33,6 +33,21 @@ namespace myInstagramClass
             Console.WriteLine(String.Format(imageString, image.image1, image.image2));
             Console.WriteLine(String.Format(postString, post.post1, post.post2));
             Console.WriteLine(String.Format(commentString, comment.comment1));
+
+            DateTime myDate1 = DateTime.Now;
+            DateTime myDate2 = new DateTime(1996, 07, 11);
+
+            if (myDate1 > myDate2)
+            {
+                Console.WriteLine(myDate1 + " is greater than " + myDate2);
+            }
+            else
+            {
+                Console.WriteLine(myDate1 + " is less than " + myDate2);
+            }
+
+
+
         }
     }
 

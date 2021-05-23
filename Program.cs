@@ -1,6 +1,7 @@
 ﻿using System;
 using myInstagramClass.Models;
 using myInstagramClass.DTOS;
+using System.Collections.Generic;
 
 namespace myInstagramClass
 {
@@ -50,8 +51,6 @@ namespace myInstagramClass
 
             int counter = 1;
 
-
-
             while (myAnswer)
             {
                 Console.WriteLine(counter);
@@ -65,6 +64,32 @@ namespace myInstagramClass
                 }
             }
 
+
+            int[] myArray = {1,2,3,4,5,6,7,8,9,10};
+
+            foreach (var value in myArray)
+            {
+                Console.WriteLine(value);
+            }
+
+
+            List<string> myList = new List<string>();
+
+            myList.Add("string 1");
+            myList.Add("string 2");
+            myList.Add("string 3");
+            myList.Add("string 4");
+            myList.Add("string 5");
+            myList.Add("string 6");
+            myList.Add("string 7");
+            myList.Add("string 8");
+            myList.Add("string 9");
+            myList.Add("string 10");
+
+            foreach(var item in myList)
+            {
+                Console.WriteLine(item);
+            }
         }
     }
 

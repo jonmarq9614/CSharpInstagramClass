@@ -46,7 +46,24 @@ namespace myInstagramClass
                 Console.WriteLine(myDate1 + " is less than " + myDate2);
             }
 
+            bool myAnswer = true;
 
+            int counter = 1;
+
+
+
+            while (myAnswer)
+            {
+                Console.WriteLine(counter);
+                counter++;
+
+                if (counter > 20)
+                {
+                    myAnswer = false;
+
+
+                }
+            }
 
         }
     }

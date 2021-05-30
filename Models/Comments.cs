@@ -9,5 +9,7 @@ namespace myInstagramClass.Models
         {
             this.comment1 = newComment1;
         }
+
+        
     }
 }

@@ -9,7 +9,7 @@ namespace myInstagramClass
     {
         static void Main(string[] args)
         {
-            Users userName = new Users("Jonathan", "Marquez");
+            /*Users userName = new Users("Jonathan", "Marquez");
             Roles role = new Roles("Actor");
             Images image = new Images("Image 1", "Image 2");
             Posts post = new Posts("at Los Angeles with my family", "About to go swim");
@@ -89,7 +89,65 @@ namespace myInstagramClass
             foreach(var item in myList)
             {
                 Console.WriteLine(item);
+            }*/
+
+            string answer = "";
+
+            while (answer != "5")
+            {
+                Console.WriteLine("1. Create a User");
+                Console.WriteLine("2. Create a Comment");
+                Console.WriteLine("3. Print the List of Users");
+                Console.WriteLine("4. Print the List of Comments");
+                Console.WriteLine("5. Exit");
+
+                Console.WriteLine("");
+                Console.WriteLine("Select a value");
+
+                answer = Console.ReadLine();
+
+                switch (answer)
+                {
+                    case "1":
+                        UsersDTO user = new UsersDTO();
+                        user.first = "Jonathan";
+                        user.last = "Marquez";
+                        user.email = "email@gmail.com";
+                        user.user = "Jonmarq";
+                        user.password = "myPassword";
+
+                        break;
+                    case "2":
+                        Comments comment = new Comments();
+                        comment.comment1 = "Life is like a box of chocolates";
+                        break;
+                    case "3":
+                    foreach(var element in UsersDTO)
+                        {
+                            Console.WriteLine(element);
+                        }
+                        break;
+                    case "4":
+                        foreach (var asset in Comments)
+                        {
+                            Console.WriteLine(asset);
+                        }
+                        break;
+                }
+
+                Console.WriteLine("you selected: " + answer);
             }
+
+
+
+
+
+
+
+
+
+
+
         }
     }
 

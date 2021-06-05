@@ -2,6 +2,7 @@
 using myInstagramClass.Models;
 using myInstagramClass.DTOS;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace myInstagramClass
 {
@@ -47,29 +48,23 @@ namespace myInstagramClass
                 Console.WriteLine(myDate1 + " is less than " + myDate2);
             }
 
-            bool myAnswer = true;
+            int result = 0;
 
-            int counter = 1;
+            for(int x = 1; x < 21; x++)
 
-            while (myAnswer)
             {
-                Console.WriteLine(counter);
-                counter++;
-
-                if (counter > 20)
-                {
-                    myAnswer = false;
-
-
-                }
+                result = result + x;
             }
+
+            Console.WriteLine(result);
 
 
             int[] myArray = {1,2,3,4,5,6,7,8,9,10};
 
+            Console.WriteLine("The values on the array are:");
             foreach (var value in myArray)
             {
-                Console.WriteLine(value);
+                Console.Write(value + ", ");
             }
 
 
@@ -86,56 +81,169 @@ namespace myInstagramClass
             myList.Add("string 9");
             myList.Add("string 10");
 
+            Console.WriteLine("");
+            Console.WriteLine("The values on the list are:");
             foreach(var item in myList)
             {
-                Console.WriteLine(item);
+                Console.Write(item + ", ");
             }*/
 
-            string answer = "";
+            /* string answer = "";
 
-            while (answer != "5")
+             while (answer != "5")
+             {
+                 Console.WriteLine("1. Create a User");
+                 Console.WriteLine("2. Create a Comment");
+                 Console.WriteLine("3. Print the List of Users");
+                 Console.WriteLine("4. Print the List of Comments");
+                 Console.WriteLine("5. Exit");
+
+                 Console.WriteLine("");
+                 Console.WriteLine("Select a value");
+
+                 answer = Console.ReadLine();
+
+                 switch (answer)
+                 {
+                     case "1":
+                         UsersDTO user = new UsersDTO();
+                         user.first = "Jonathan";
+                         user.last = "Marquez";
+                         user.email = "email@gmail.com";
+                         user.user = "Jonmarq";
+                         user.password = "myPassword";
+
+                         break;
+                     case "2":
+                         Comments comment = new Comments();
+                         comment.comment1 = "Life is like a box of chocolates";
+                         break;
+                     case "3":
+                     foreach(var element in UsersDTO)
+                         {
+                             Console.WriteLine(element);
+                         }
+                         break;
+                     case "4":
+                         foreach (var asset in Comments)
+                         {
+                             Console.WriteLine(asset);
+                         }
+                         break;
+                 }
+
+                 Console.WriteLine("you selected: " + answer);
+            }*/
+
+            try
             {
-                Console.WriteLine("1. Create a User");
-                Console.WriteLine("2. Create a Comment");
-                Console.WriteLine("3. Print the List of Users");
-                Console.WriteLine("4. Print the List of Comments");
-                Console.WriteLine("5. Exit");
+                List<Users> userList = new List<Users>();
 
-                Console.WriteLine("");
-                Console.WriteLine("Select a value");
+                Users firstUser = new Users();
+                firstUser.first = "Jonathan";
+                firstUser.last = "Marquez";
+                firstUser.email = "student@southwestuniversity.edu";
+                firstUser.user = "superUser";
+                firstUser.password = "myPassword";
 
-                answer = Console.ReadLine();
+                userList.Add(firstUser);
+                Users secondUser = new Users();
+                secondUser.first = "Jon";
+                secondUser.last = "Marq";
+                secondUser.email = "student2@southwestuniversity.edu";
+                secondUser.user = "smartUser";
+                secondUser.password = "myPassword2";
 
-                switch (answer)
+                userList.Add(secondUser);
+
+                Users thirdUser = new Users();
+                thirdUser.first = "Celeste";
+                thirdUser.last = "Mar";
+                thirdUser.email = "student3@southwestuniversity.edu";
+                thirdUser.user = "amazingUser";
+                thirdUser.password = "myPassword3";
+
+                userList.Add(thirdUser);
+
+                Users fourthUser = new Users();
+                fourthUser.first = "Alexis";
+                fourthUser.last = "Hernandez";
+                fourthUser.email = "student4@southwestuniversity.edu";
+                fourthUser.user = "creativeUser";
+                fourthUser.password = "myPassword4";
+
+                userList.Add(fourthUser);
+
+                Users fifthUser = new Users();
+                fifthUser.first = "David";
+                fifthUser.last = "Armani";
+                fifthUser.email = "student5@southwestuniversity.edu";
+                fifthUser.user = "funnyUser";
+                fifthUser.password = "myPassword5";
+
+                userList.Add(fifthUser);
+
+                Users sixthUser = new Users();
+                sixthUser.first = "Amery";
+                sixthUser.last = "Eve";
+                sixthUser.email = "student6@southwestuniversity.edu";
+                sixthUser.user = "comedianUser";
+                sixthUser.password = "myPassword6";
+
+                userList.Add(sixthUser);
+
+                Users seventhUser = new Users();
+                seventhUser.first = "Irma";
+                seventhUser.last = "Cordero";
+                seventhUser.email = "student7@southwestuniversity.edu";
+                seventhUser.user = "momUser";
+                seventhUser.password = "myPassword7";
+
+                userList.Add(seventhUser);
+
+                userList.Add(firstUser);
+                Users eighthUser = new Users();
+                eighthUser.first = "Gera";
+                eighthUser.last = "Cordero";
+                eighthUser.email = "student8@southwestuniversity.edu";
+                eighthUser.user = "familyUser";
+                eighthUser.password = "myPassword8";
+
+                userList.Add(eighthUser);
+
+                userList.Add(firstUser);
+                Users ninethUser = new Users();
+                ninethUser.first = "Issac";
+                ninethUser.last = "Guzman";
+                ninethUser.email = "student9@southwestuniversity.edu";
+                ninethUser.user = "cousinUser";
+                ninethUser.password = "myPassword9";
+
+                userList.Add(ninethUser);
+
+                Users tenthUser = new Users();
+                tenthUser.first = "Cruz";
+                tenthUser.last = "Marquez";
+                tenthUser.email = "student10@southwestuniversity.edu";
+                tenthUser.user = "dadUser";
+                tenthUser.password = "myPassword10";
+
+                userList.Add(ninethUser);
+
+                List<Users> result = userList.OrderBy(Users => Users.user == "dogUser").ToList();
+
+                if(result == userList.OrderBy(Users => Users.user == "dogUser").ToList())
                 {
-                    case "1":
-                        UsersDTO user = new UsersDTO();
-                        user.first = "Jonathan";
-                        user.last = "Marquez";
-                        user.email = "email@gmail.com";
-                        user.user = "Jonmarq";
-                        user.password = "myPassword";
-
-                        break;
-                    case "2":
-                        Comments comment = new Comments();
-                        comment.comment1 = "Life is like a box of chocolates";
-                        break;
-                    case "3":
-                    foreach(var element in UsersDTO)
-                        {
-                            Console.WriteLine(element);
-                        }
-                        break;
-                    case "4":
-                        foreach (var asset in Comments)
-                        {
-                            Console.WriteLine(asset);
-                        }
-                        break;
+                    throw new MyUserException("i didnt find that user");
                 }
-
-                Console.WriteLine("you selected: " + answer);
+            }
+            catch(MyUserException exception)
+            {
+                Console.WriteLine(exception.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Program has ended");
             }
 
 
@@ -143,12 +251,18 @@ namespace myInstagramClass
 
 
 
-
-
-
-
-
         }
-    }
 
+
+
+        
+    }
+}
+
+public class MyUserException : Exception
+{
+    public MyUserException(string errorMessage) : base(errorMessage)
+    {
+        
+    }
 }

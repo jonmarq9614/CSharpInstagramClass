@@ -135,7 +135,7 @@ namespace myInstagramClass
                  Console.WriteLine("you selected: " + answer);
             }*/
 
-            try
+            /*try
             {
                 List<Users> userList = new List<Users>();
 
@@ -244,13 +244,25 @@ namespace myInstagramClass
             finally
             {
                 Console.WriteLine("Program has ended");
-            }
+            }*/
 
+           
 
+            MyGenericClass myClass = new MyGenericClass();
+            myClass.MyProperty = "Generic string";
+            myClass.MyProperty2 = "Generic string 2";
+            myClass.MyProperty3 = 42;
 
+            Console.WriteLine(myClass.MyProperty);
+            Console.WriteLine(myClass.MyProperty2);
+            Console.WriteLine(myClass.MyProperty3);
 
+            NewGenericClass<int> myNewClass = new NewGenericClass<int>();
+            myNewClass.MyNormalProperty = "My new generic string";
+            myNewClass.MyGenericProperty = 1996;
 
-
+            Console.WriteLine(myNewClass.MyNormalProperty);
+            Console.WriteLine(myNewClass.MyGenericProperty);
         }
 
 
@@ -259,10 +271,24 @@ namespace myInstagramClass
     }
 }
 
-public class MyUserException : Exception
+public class MyGenericClass
+{
+    public string MyProperty { get; set; }
+    public string MyProperty2 { get; set; }
+    public int MyProperty3 { get; set; }
+}
+
+public class NewGenericClass<Key>
+{
+    public string MyNormalProperty { get; set; }
+    public Key MyGenericProperty { get; set; }
+}
+
+
+/*public class MyUserException : Exception
 {
     public MyUserException(string errorMessage) : base(errorMessage)
     {
         
     }
-}
+}*/

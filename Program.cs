@@ -246,9 +246,9 @@ namespace myInstagramClass
                 Console.WriteLine("Program has ended");
             }*/
 
-           
 
-            MyGenericClass myClass = new MyGenericClass();
+
+            /*MyGenericClass myClass = new MyGenericClass();
             myClass.MyProperty = "Generic string";
             myClass.MyProperty2 = "Generic string 2";
             myClass.MyProperty3 = 42;
@@ -262,7 +262,12 @@ namespace myInstagramClass
             myNewClass.MyGenericProperty = 1996;
 
             Console.WriteLine(myNewClass.MyNormalProperty);
-            Console.WriteLine(myNewClass.MyGenericProperty);
+            Console.WriteLine(myNewClass.MyGenericProperty);*/
+
+
+            RegularClass newRegularClass = new RegularClass();
+            newRegularClass.ConsolePrint<string, int>("String 1", "String 2", 22);
+
         }
 
 
@@ -271,7 +276,19 @@ namespace myInstagramClass
     }
 }
 
-public class MyGenericClass
+
+public class RegularClass
+{
+    public void ConsolePrint<T, J>(string parameter1, T parameter2, J parameter3)
+    {
+        Console.WriteLine("My parameter values are:");
+        Console.WriteLine(parameter1);
+        Console.WriteLine(parameter2);
+        Console.WriteLine(parameter3);
+    }
+}
+
+/*public class MyGenericClass
 {
     public string MyProperty { get; set; }
     public string MyProperty2 { get; set; }
@@ -282,7 +299,7 @@ public class NewGenericClass<Key>
 {
     public string MyNormalProperty { get; set; }
     public Key MyGenericProperty { get; set; }
-}
+}*/
 
 
 /*public class MyUserException : Exception

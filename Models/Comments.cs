@@ -10,6 +10,13 @@ namespace myInstagramClass.Models
             this.comment1 = newComment1;
         }
 
-        
+        public Comments()
+        {
+        }
+
+        public static implicit operator string(Comments v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

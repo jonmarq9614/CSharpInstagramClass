@@ -88,52 +88,89 @@ namespace myInstagramClass
                 Console.Write(item + ", ");
             }*/
 
-            /* string answer = "";
+             string answer = "";
 
-             while (answer != "5")
+             while (answer != "7")
              {
                  Console.WriteLine("1. Create a User");
                  Console.WriteLine("2. Create a Comment");
                  Console.WriteLine("3. Print the List of Users");
                  Console.WriteLine("4. Print the List of Comments");
-                 Console.WriteLine("5. Exit");
-
-                 Console.WriteLine("");
-                 Console.WriteLine("Select a value");
+                 Console.WriteLine("5. Look for a User");
+                 Console.WriteLine("6. Look for a Comment");
+                 Console.WriteLine("7. Exit");
+                Console.WriteLine("");
+                Console.WriteLine("Select a value");
 
                  answer = Console.ReadLine();
+                List<Users> userList = new List<Users>();
+                List<Comments> commentsList = new List<Comments>();
 
-                 switch (answer)
+                switch (answer)
                  {
                      case "1":
-                         UsersDTO user = new UsersDTO();
+                         Users user = new Users();
                          user.first = "Jonathan";
                          user.last = "Marquez";
                          user.email = "email@gmail.com";
                          user.user = "Jonmarq";
                          user.password = "myPassword";
 
+                        userList.Add(user);
+
                          break;
                      case "2":
                          Comments comment = new Comments();
                          comment.comment1 = "Life is like a box of chocolates";
+
+                        commentsList.Add(comment);
+
                          break;
                      case "3":
-                     foreach(var element in UsersDTO)
+                     foreach(var element in userList)
                          {
-                             Console.WriteLine(element);
-                         }
+                             Console.WriteLine(element.user);
+                             Console.WriteLine(element.password);
+                             Console.WriteLine(element.email);
+                        }
                          break;
                      case "4":
-                         foreach (var asset in Comments)
+                         foreach (var asset in commentsList)
                          {
-                             Console.WriteLine(asset);
+                             Console.WriteLine(asset.comment1);
                          }
                          break;
-                 }
+                    case "5":
+                        string search = "";
+                        search = Console.ReadLine();
+                        if(search == user)
+                        {
+                            Console.WriteLine("User was found");
+                        }
+                        else
+                        {
+                            Console.WriteLine("User was not found");
+                        }
+
+                        break;
+                    case "6":
+                        string searching = "";
+                        searching = Console.ReadLine();
+                        if (searching == comment)
+                        {
+                            Console.WriteLine("comment was found");
+                        }
+                        else
+                        {
+                            Console.WriteLine("comment was not found");
+                        }
+
+                        break;
+
+                }
 
                  Console.WriteLine("you selected: " + answer);
-            }*/
+             }
 
             /*try
             {
@@ -265,8 +302,8 @@ namespace myInstagramClass
             Console.WriteLine(myNewClass.MyGenericProperty);*/
 
 
-            RegularClass newRegularClass = new RegularClass();
-            newRegularClass.ConsolePrint<string, int>("String 1", "String 2", 22);
+            //RegularClass newRegularClass = new RegularClass();
+            //newRegularClass.ConsolePrint<string, int>("String 1", "String 2", 22);
 
         }
 
@@ -277,7 +314,7 @@ namespace myInstagramClass
 }
 
 
-public class RegularClass
+/*public class RegularClass
 {
     public void ConsolePrint<T, J>(string parameter1, T parameter2, J parameter3)
     {
@@ -286,7 +323,7 @@ public class RegularClass
         Console.WriteLine(parameter2);
         Console.WriteLine(parameter3);
     }
-}
+}*/
 
 /*public class MyGenericClass
 {

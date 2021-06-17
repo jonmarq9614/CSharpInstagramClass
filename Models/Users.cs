@@ -22,5 +22,10 @@ namespace myInstagramClass.Models
         public Users()
         {
         }
+
+        public static implicit operator string(Users v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
